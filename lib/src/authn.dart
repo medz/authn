@@ -1,7 +1,7 @@
-import 'package:authn/src/types.dart';
+import 'package:authn/src/adapter.dart';
+import 'package:authn/src/provider.dart';
 
-class Authn<T extends Object, S extends Session<T>, U extends User<T>> {
-  final Adapter<T, S, U> adapter;
-
-  const Authn(this.adapter);
+class Authn {
+  final Adapter adapter;
+  final Iterable<Provider> providers;
 }
